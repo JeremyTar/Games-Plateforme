@@ -430,12 +430,12 @@ $randomRockRotate: random($limit: 5);
       button {
         background-color: transparent;
         border: none;
-        font-family: "African";
+        font-family: "African", sans-serif;
         color: #C4A173;
         cursor: pointer;
       }
       input {
-      font-family: "African";
+      font-family: "African", sans-serif;
       font-size: 2.5em;
       color:#C4A173;
       max-width: 300px;
@@ -452,7 +452,7 @@ $randomRockRotate: random($limit: 5);
       font-size: 3em;
       color:#C4A173;
       height: 50px;
-      font-family: "African";
+      font-family: "African", sans-serif;
       margin: 5px ;
     }
     img {
@@ -474,7 +474,7 @@ $randomRockRotate: random($limit: 5);
       position: relative;
       top: -100px;
       font-size: 2em;
-      font-family: "BaksoSapi";
+      font-family: "BaksoSapi", sans-serif;
       color: #4d140b;
       transition: 1s;
     }
@@ -572,7 +572,7 @@ $randomRockRotate: random($limit: 5);
         .credits {
           color: #F6E6D2;
           font-size: 0.8em;
-          font-family: 'BaksoSapi';
+          font-family: 'BaksoSapi', sans-serif;
           margin: 0;
         }
       }
@@ -587,7 +587,7 @@ $randomRockRotate: random($limit: 5);
     }
   }
   h2, h3 {
-    font-family: "African";
+    font-family: "African", sans-serif;
     text-align: center;
     color:#C4A173;
     text-shadow: 1px 1px 1px 
@@ -602,7 +602,7 @@ $randomRockRotate: random($limit: 5);
     li {
       list-style: none;
       text-align: center;
-      font-family: "BaksoSapi";
+      font-family: "BaksoSapi", sans-serif;
       color: #F6E6D2;
       font-size: 1.2em;
       margin: 10px;

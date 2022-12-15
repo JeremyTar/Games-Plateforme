@@ -1,8 +1,6 @@
 import * as express from 'express';
-import * as mongoose from 'mongoose'
 
-
-const app = express()
+const app: express = express()
 
     .use(express.json())
 
