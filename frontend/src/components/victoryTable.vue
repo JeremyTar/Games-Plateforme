@@ -69,11 +69,11 @@ export default {
     border: 2px rgba(77,20,11,0.7) ridge;
     border-radius: 25px;
     h2 {
-        font-family: "African";
+        font-family: "African", sans-serif;
         font-size: 3em;
     }
     li, p {
-        font-family: "BaksoSapi";
+        font-family: "BaksoSapi", sans-serif;
         font-size: 2em;
         color: #C4A173;
     }

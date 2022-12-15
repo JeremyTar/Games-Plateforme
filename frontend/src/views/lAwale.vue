@@ -451,7 +451,6 @@ $randomRockRotate: random($limit: 5);
       height: 50px;
       font-size: 3em;
       color:#C4A173;
-      height: 50px;
       font-family: "African", sans-serif;
       margin: 5px ;
     }

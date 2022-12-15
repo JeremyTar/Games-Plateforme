@@ -333,7 +333,7 @@ export default {
           border: none;
           font-size: 2em;
           border-radius: 5%;
-          font-family: "Colleged";
+          font-family: "Colleged", sans-serif;
           opacity: 0.8;
         }
         button {
