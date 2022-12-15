@@ -1,10 +1,12 @@
 <template>
     <div id="home">
         <h1>Hall de jeux</h1>
-          <nav id="nav">
-    <li><router-link to="/lependu">Pendu</router-link></li>
-    <li><router-link to="/lawale">Awale</router-link></li>
-  </nav>
+        <nav id="nav">
+            <ul>
+                <li><router-link to="/lependu">Pendu</router-link></li>
+                <li><router-link to="/lawale">Awale</router-link></li>
+            </ul>
+        </nav>
     </div>
 </template>
 
@@ -13,7 +15,7 @@ export default {
     name: "GameHome",
     data() {
         return {
-            
+
         }
     },
 }
@@ -24,7 +26,8 @@ export default {
     background-color: grey;
     width: 100%;
     height: 100vh;
-    li{
+
+    li {
         list-style: none;
     }
 }

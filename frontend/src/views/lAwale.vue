@@ -184,7 +184,7 @@ export default {
       return seed
     },
     beginGame() {
-      for(let i = 0; i < this.terrain.length; i++) {
+      for(const i in this.terrain) {
         this.terrain[i].boque = 0
         this.terrain[i].jeux.forEach((el) => {
           el.nbBille = 4
@@ -304,7 +304,7 @@ export default {
       return sommeBille;
     },
     tchekPioche(Adversaire, indexPioche) {
-      for(let i = 0; i< this.terrain[Adversaire].jeux.length; i++) {
+      for(const i in this.terrain[Adversaire].jeux) {
         if((this.terrain[Adversaire].jeux[i].NumPioche) - 1 != indexPioche) {
           if(this.terrain[Adversaire].jeux[i].nbBille != 0) {
             return true            
@@ -349,7 +349,7 @@ export default {
     },
     ChangeName(player) {
       if(player == 0) {
-        if(this.nameOnChange0 == true) {
+        if(this.nameOnChange0) {
           this.nameOnChange0 = false
         }
         else {
@@ -357,7 +357,7 @@ export default {
         }
       }
       else {
-        if(this.nameOnChange1 == true) {
+        if(this.nameOnChange1) {
           this.nameOnChange1 = false
         }
         else {

@@ -23,7 +23,9 @@
         <div class="GameAreaPendu__informations__letters">
           <p>Letter use :</p>
           <div class="letter">
-            <li  v-for="value in this.useLetter" :key="value">{{value}}</li> 
+            <ul>
+              <li  v-for="value in this.useLetter" :key="value">{{value}}</li> 
+            </ul>
           </div>
         </div>
         <div class="GameAreaPendu__informations__input">
@@ -84,7 +86,7 @@ export default {
         ];
       console.log(this.word);
       this.word.split("").forEach((el) => {
-        this.ArrayWord.push(el.toUpperCase()),
+        this.ArrayWord.push(el.toUpperCase())
         this.CurrentArray.push(0)
       });
         this.ReplaceLetter()
@@ -99,7 +101,7 @@ export default {
     ReplaceLetter() {
       for (let i = 0; i < this.ArrayWord.length; i++) {
         if(this.CurrentArray[i] == 0) {
-          var NewUnderscore = document.createElement("div");
+          let NewUnderscore = document.createElement("div");
           NewUnderscore.style.width = "5%";
           NewUnderscore.style.height = "5px";
           NewUnderscore.style.backgroundColor = "black";
@@ -110,8 +112,8 @@ export default {
           NewUnderscore.setAttribute("class", "hide")
             }
         else {
-          var NewLetter = document.createElement("div")
-          var newContent = document.createTextNode(this.ArrayWord[i])
+          let NewLetter = document.createElement("div")
+          let newContent = document.createTextNode(this.ArrayWord[i])
           NewLetter.style.width = "5%";
           NewLetter.style.height = "35px";
           NewLetter.style.margin = "0px 5px";
@@ -127,13 +129,13 @@ export default {
       if(this.word) {
         let find = false
         if(this.currentLetter.match(/[a-zA-Z]/)) {
-          for(let i = 0; i < this.useLetter.length; i++) {
+          for(const i in this.useLetter) {
             if(this.currentLetter.toUpperCase() == this.useLetter[i]) {
               window.alert("you already take this letter ! Pick an other one")
               return
             }
           }
-          for(let i = 0; i < this.ArrayWord.length; i++) {
+          for(const i in this.ArrayWord) {
             if(this.CurrentArray[i] == 0) {
               if(this.currentLetter.toUpperCase() == this.ArrayWord[i]) {
                 this.CurrentArray[i] = 1
@@ -141,7 +143,7 @@ export default {
               }
             }
           }
-          if(find == false) {
+          if(!find) {
             this.NbrOfLife--
             if(this.NbrOfLife === 0){
               window.alert("vous avez perdu")
@@ -158,7 +160,7 @@ export default {
           this.NbrOfClick++
           this.useLetter.push(this.currentLetter.toUpperCase())
           this.currentLetter = ""   
-          if(find == true) {
+          if(find) {
             for(let i = 0; i < this.ArrayWord.length; i++) {
               if(this.CurrentArray[i] == 0) {
                 return
@@ -175,14 +177,12 @@ export default {
       }
       else {
         window.alert("Choose a categorie")
-        return
       }
       
     },
     Surrend() {
       if(!this.word) {
         window.alert("begin a game before")
-        return
       }
       else {
         for(let i = 0; i < this.CurrentArray.length; i++) {
@@ -192,12 +192,8 @@ export default {
         this.clearWord()
         this.ReplaceLetter()
         window.alert("vous avez perdu, cliquer sur une categorie pour rejouer")
-        return
       }
     }
-  },
-  mounted() {
-    // this.chooseWord();
   },
 };
 </script>
@@ -220,11 +216,11 @@ export default {
   width: 100%;
   h1 {
     text-align: center;
-    font-family: "Colleged";
+    font-family: "Colleged", sans-serif;
     font-size: 5em
   }
   p {
-    font-family: "Sketchzone";
+    font-family: "Sketchzone", sans-serif;
   }
   .Background {
     width: 100vw;
@@ -313,12 +309,15 @@ export default {
         flex-direction: column;
         .letter {
           display: flex;
-        }
-        li {
-          list-style: none;
-          font-size: 2em;
-          margin: 0 10px;
-          font-family: "Colleged";
+          ul {
+            display: flex;
+            li {
+              list-style: none;
+              font-size: 2em;
+              margin: 0 10px;
+              font-family: "Colleged", sans-serif;
+            }          
+          }          
         }
       }
       &__input {
@@ -340,7 +339,7 @@ export default {
         button {
           height: 50px;
           margin: 0 5px;
-          font-family: "Sketchzone";
+          font-family: "Sketchzone", sans-serif;
           border: ridge 2px #F2D7AB;
           border-radius: 5%;
           background-color: transparent;
